@@ -1,0 +1,5 @@
+| Model Family                | Depth | Hyperparameters          | Test Macro-F1 | Test Accuracy | Fit Time (s) | Notes / Key Finding                                      |
+| :-------------------------- | :---: | :----------------------- | :-----------: | :-----------: | :----------: | :------------------------------------------------------- |
+| **Baseline (Dummy)**        |   C   | Strategy = Most Frequent |    0.0514     |    18.22%     |    < 0.01s   | Floor bound from R0.                   |
+| **Decision Tree (Scratch)** |   B   | max_depth = 8            |  0.8694   |  87.28%   |   248.00s    | From-scratch best_split; F1 significantly outperforms baseline (+0.818). |
+| **Decision Tree (Sklearn)** |   C   | max_depth = 8            |  0.8646   |  86.83%   |    9.58s     | Standard benchmark; equivalent algorithm, ~26x faster. |
